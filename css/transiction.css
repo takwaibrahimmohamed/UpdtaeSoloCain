@@ -1,0 +1,128 @@
+.overall{
+    color: white;
+    margin-top: 20px;
+}
+.overall .overallText,.profit .profitText{
+text-transform: capitalize;
+font-size: 12px;
+margin-bottom: 0;
+color: white;
+}
+.overall .wither{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #332941;
+border-radius: 8px;
+height: 45px;
+padding: 0 5px;
+margin-top: 15px;
+text-transform: capitalize;
+padding-left: 10px;
+}
+.overall .wither .text{
+font-size: 12px;
+}
+.overall .wither .btnWither{
+background-color: #7603ff;
+border: none;
+border-radius: 7px;
+padding: 10px 20px;
+color: white;
+text-transform: capitalize;
+font-size: 11px;
+
+}
+
+/* profit  */
+.profit{
+    margin-bottom: 30PX;
+}
+.profit .profitText{
+margin: 20px 0;
+}
+.profit table{
+    background-color: #241c31;
+    border-radius: 7px;
+    padding:0 5px;
+}
+.profit table .Urankcontent{
+    background-color: #332941;
+    
+    height: 30px;
+ 
+}
+table td{
+    text-align: start;
+    padding: 0 10px;
+    font-size: 9px;
+}
+.profit thead td:first-child,
+.profit thead th:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.profit thead td:last-child,
+.profit thead th:last-child {
+  border-radius: 0 5px 5px 0;
+  
+}
+.profit tbody td{
+    border-bottom: 1px solid #2f263b;
+    border-radius: 0;
+    padding-bottom: 5px;
+}
+.profit tbody .exept td{
+    border-bottom: none;
+  
+}
+.profit table .profhead,.referal .profhead{
+   font-size: 11px;
+   font-weight: bold;
+ 
+}
+.profit table .profhead span,.referal .profhead span{
+   font-size: 9px;
+}
+/* profit  */
+/* .referal  */
+.referal table{
+    border-collapse:separate; 
+    border-spacing: 0 .1em;
+    width: 100%;
+}
+
+
+.referal thead{
+    background-color: #332941;
+    
+    height: 40px;
+}
+.referal tbody td{
+    background-color: #241c31;
+    
+    height: 40px;
+}
+.referal td:first-child,
+.referal th:first-child {
+  border-radius: 0px 0 0 0px;
+}
+.referal td:last-child,
+.referal th:last-child {
+  border-radius: 0 0px 0px 0;
+}
+.referal thead td:first-child,
+.referal thead th:first-child {
+  border-radius: 10px 0 0 0px;
+}
+.referal thead td:last-child,
+.referal thead th:last-child {
+  border-radius: 0 10px 0px 0;
+}
+.referal td{
+padding: 0 20px;
+}
+.referal td.second{
+    text-align: end;
+}
+/* .referal  */
+

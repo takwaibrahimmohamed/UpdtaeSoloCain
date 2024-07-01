@@ -1,0 +1,638 @@
+.DashProfit{
+   padding: 30px 0;
+    background-color: #241c31;
+}
+.DashProfit .content{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+color: white;
+
+}
+.DashProfit .walletBallance{
+display: flex;
+flex-direction: column;
+gap: 10px;   
+}
+.DashProfit .walletBallance p,.DashProfit .walletBallance h3{
+    padding: 0;
+    margin: 0;
+   text-transform: capitalize;
+
+}
+.DashProfit .walletBallance .profText{
+   font-size: 10px;
+   font-weight: 500;
+}
+.DashProfit .walletBallance .profhead{
+   font-size: 11px;
+   font-weight: 900;
+}
+
+
+
+.DashProfit .wither{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #332941;
+border-radius: 7px;
+height: 30px;
+padding: 0 5px;
+margin-top: 15px;
+text-transform: capitalize;
+padding-left: 10px;
+padding-right: 3px;
+
+}
+.DashProfit .wither .text{
+font-size: 12px;
+color: white;
+font-weight: 900;
+}
+.DashProfit .wither .btnWither{
+background-color: #7603ff;
+border: none;
+border-radius: 7px;
+padding: 6px 40px;
+color: white;
+text-transform: capitalize;
+font-size: 11px;
+font-weight: 600;
+
+}
+/* charts */
+.charts{
+  margin-top: 30px;
+  position: relative;
+}
+.charts .content{
+    position: relative;
+}
+.charts .content .dashtext{
+font-size: 12px;
+padding: 0;
+margin: 0;
+color: white;
+text-transform: capitalize;
+}
+.charts .content .graghs{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+position: relative;
+}
+.charts .box,
+.charts .box-copy {
+    position: relative;
+  width: 100px;
+  height: 200px;
+  display: box;
+  /* margin: 5% auto auto auto; */
+transform: translateY(-40%);
+}
+
+.charts .box-copy {
+  /* border: 0; */
+  margin: .5% 0;
+  border: 0;
+  height: 100%;
+  top: 100%;
+  z-index: 2;
+
+}
+
+.charts .contain {
+  background-color: #5f5172;
+  position: absolute;
+  width: 5%;
+  height: 30%;
+  /* margin: 0 1em; */
+  bottom: 0%;
+  left: 2%;
+  animation: slideUp 1s ease forwards;
+}
+
+
+.charts .first::after{
+    content: "0.55%";
+    position: absolute;
+    top: -16px;
+    color: white;
+    font-size: 7px;
+    left: 0%;
+    transform: translateX(-50%);
+    font-weight: 700;
+}
+.charts .contain:nth-of-type(2) {
+  /* animation-delay: 1s; */
+  background: #5f5172;
+  height: 40%;
+  left: 15%;
+  animation: slideUp2 1s ease forwards;
+}
+.charts .contain:nth-of-type(2)::after{
+    content: "0.65%";
+    position: absolute;
+    top: -16px;
+    color: white;
+    font-size: 7px;
+    left:10%;
+    transform: translateX(-50%);
+    font-weight: 700;
+}
+.charts .contain:nth-of-type(3) {
+  /* animation-delay: 1s; */
+  background: #7603ff;
+  height: 50%;
+  left: 28%;
+  animation: slideUp3 1s ease forwards;
+}
+.charts .contain:nth-of-type(3)::after{
+    content: "0.80%";
+    position: absolute;
+    top: -16px;
+    color: white;
+    font-size: 7px;
+    left: 0%;
+    transform: translateX(-50%);
+    font-weight: 700;
+}
+.charts .contain:nth-of-type(4) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 41%;
+}
+
+.charts .contain:nth-of-type(5) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 54%;
+}
+
+.charts .contain:nth-of-type(6) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 67%;
+}
+.charts .contain:nth-of-type(7) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 80%;
+}
+.charts .contain:nth-of-type(8) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 93%;
+}
+.charts .contain:nth-of-type(9) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 106%;
+}
+.charts .contain:nth-of-type(10) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 119%;
+}
+.charts .contain:nth-of-type(11) {
+  /* animation-delay: 1s; */
+  background: #332941;
+  height: 30%;
+  left: 132%;
+}
+
+.charts .skill-name:nth-of-type(7) {
+  left: 15%;
+}
+
+
+.charts .skill-name:nth-of-type(8) {
+  left: 30%;
+}
+
+.charts .skill-name:nth-of-type(9) {
+  left: 45%;
+}
+
+
+
+.skill-name:nth-of-type(10) {
+  left: 60%;
+}
+
+
+
+.skill-name:nth-of-type(11) {
+  left: 75%;
+}
+
+.graghs .box .rang{
+    color: #6c4fc3;
+    text-transform: capitalize;
+    font-size: 7px;
+    letter-spacing: .5;
+    width: 168%;
+}
+@keyframes slideUp {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 30%;
+  }
+}
+
+@keyframes slideUp2 {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 40%;
+  }
+}
+@keyframes slideUp3 {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 50%;
+  }
+}
+
+.charts .circle{
+    background-color: #332941;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+  
+  .semi-donut-model-2 {
+    width: 110px;
+    height: 55px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 150px 150px 0 0;
+    overflow: hidden;
+    color: var(--fill);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    transform: rotate(92deg);
+    left: 41px;
+    top: 39px;
+  }
+  .semi{
+    left: 48px;
+    width: 90px;
+    height: 45px;
+    top: -12px;
+}
+
+
+  .semi-donut-model-2::before, .semi-donut-model-2::after {
+    content: '';
+    width: 110px;
+    height: 55px;
+    border: 5px solid var(--fill);
+    border-top: none;
+    position: absolute;
+    transform-origin: 50% 0% 0;
+    border-radius: 0 0 300px 300px;
+    box-sizing: border-box;
+    left: 0;
+    top: 100%;
+    overflow: hidden;
+  }
+  .semi::before, .semi::after{
+    width: 90px;
+    height: 45px;
+  }
+  .semi-donut-model-2::before {
+    border-color: rgba(0, 0, 0, .15);
+    transform: rotate(180deg);
+  }
+  
+  .semi-donut-model-2::after {
+    z-index: 3;
+    animation: 1s fillGraphAnimation ease-in;
+    transform: rotate(calc(1deg * (var(--percentage) * 1.8)));
+  }
+  
+  
+  @keyframes fillAnimation {
+    0% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(135deg);
+    }
+  }
+  
+  @keyframes fillGraphAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+  .charts .circle .image{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0b0410;
+    border-radius: 50%;
+  }
+  .charts .circle .image img{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .charts .circle .text{
+color: #dad0e8;
+position: absolute;
+bottom: 22%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 8px;
+text-transform: capitalize;
+  }
+  .charts .circle .drawcircl{
+background-color: #241c31;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border: 2px solid #21182d;
+font-size: 10px;
+color: white;
+width: 125px;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 11;
+opacity: .9;
+height: 30px;
+  }
+  .charts .circle .drawcircl::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 35px;
+    background-color: #241c31;
+    left: -11px;
+    border-radius: 10px;
+    border: 2px solid #21182d;
+    border-right: none;
+  }
+  .charts .circle .drawcircl::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 35px;
+    background-color: #241c31;
+    right: -11px;
+    border-radius: 10px;
+    border: 2px solid #21182d;
+    border-left: none;
+  
+  }
+  .charts .circle .drawcircl p{
+    margin: 0;
+  }
+  .charts .circle .bullet{
+border: 1px solid #21192e;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 50px;
+height: 16px;
+padding: 5px;
+color: white;
+margin: 0 auto;
+
+  }
+  .charts .circle .bullet .firstBullet,
+  .charts .circle .bullet .secondBullet
+  {
+    border-radius: 50%;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #57c225;
+  
+  }
+  .charts .circle .bullet .secondBullet{
+    background-color: #7501ff;
+  }
+  .charts .circle .bullet .arrow{
+    border-left:1px solid #21192e;
+    font-size: 11px;
+    padding-left: 5px;
+  }
+  .charts .circle .bullet span i{
+    font-size: 10px;
+  }
+/* charts */
+/*collectbonus */
+.collectbonus{
+    
+}
+.collectbonus .content{
+display: flex;
+flex-direction: column;
+color: white;
+gap: 12px;
+
+}
+.collectbonus .content .head{
+background-color: #332941;
+margin: 0;
+padding: 7px 15px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+font-size: 12px;
+font-weight: 700;
+text-transform: capitalize;
+}
+.collectbonus .content p{
+    margin: 0;
+}
+.collectbonus .result{
+    display: flex;
+    flex-direction: column;
+gap: 10px;
+margin-bottom: 10px;
+}
+.collectbonus .result .res{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+   position: relative;
+   font-size: 10px;
+}
+.collectbonus .result .res:not(:last-child)::before{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #332941;
+    bottom: -5px;
+}
+.collectbonus .result .res .date{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 8px;
+}
+.collectbonus .withdraw{
+    width: 100%;
+    background-color: #7603ff;
+    color: white;
+    border-radius: 7px;
+    text-transform: uppercase;
+border: none;
+padding: 10px 0;
+font-size: 12px;
+}
+.collectbonus .bonustext{
+    font-size: 8px;
+    padding: 0 10px;
+    position: relative;
+    text-transform: capitalize;
+}
+.collectbonus .bonustext::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+.collectbonus .colect{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #332941;
+    border-radius: 7px;
+    padding:10px;
+text-transform: capitalize;
+}
+.collectbonus .colect h3{
+    margin: 0;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+.collectbonus .colect p{
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+/* collectbonus */
+/* participation  */
+.participation{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.participation .content{
+    background-color: #332941;
+    border-radius: 10px;
+   
+    padding: 10px;
+    margin-bottom: 0;
+    
+
+}
+.participation .content .rankcontent{
+    background-color: #241c31;
+    height: 30px;
+}
+.participation .content .rankcontent td{
+    font-size: 9px;
+}
+.participation .content .rankcontent .date{
+    display: block;
+    text-align: end;
+    width: 80%;
+   font-size: 6px;
+}
+.participation h3{
+color: white;
+font-size: 12px;
+text-transform: capitalize;
+margin: 0;
+padding: 0;
+}
+.participation table{
+
+}
+/* participation  */
+/* responmnsive */
+@media (min-width:375px){
+   
+    .charts .box,
+    .charts .box-copy {
+        position: relative;
+      width: 145px;
+      height: 200px;
+      display: box;
+      /* margin: 5% auto auto auto; */
+    transform: translateY(-40%);
+    }
+    .graghs .box .rang{
+        font-size: 9px;
+    }
+  
+    
+}
+@media (min-width:425px){
+   
+    .charts .box,
+    .charts .box-copy {
+        position: relative;
+      width: 165px;
+      height: 200px;
+      display: box;
+      /* margin: 5% auto auto auto; */
+    transform: translateY(-40%);
+    }
+    .graghs .box .rang{
+        font-size: 9px;
+    }
+  .charts .content .dashtext{
+    margin-bottom: 10px;
+  }
+    
+}

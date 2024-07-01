@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+.semi-donut {
+  /* --percentage: 0; */
+  --fill: #ff0;
+  width: 300px;
+  height: 150px;
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  color: green;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.semi-donut::after {
+  content: '';
+  width: 300px;
+  height: 300px;
+  border: 50px solid;
+  border-color: rgba(0, 0, 0, 0.15) rgba(51, 24, 187, 0.15) green yellow;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+  animation: fillAnimation 1s ease-in;
+}
+
+.semi-donut-model-2 {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 150px 150px 0 0;
+  overflow: hidden;
+  color: var(--fill);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.semi-donut-model-2::before, .semi-donut-model-2::after {
+  content: '';
+  width: 300px;
+  height: 150px;
+  border: 50px solid var(--fill);
+  border-top: none;
+  position: absolute;
+  transform-origin: 50% 0% 0;
+  border-radius: 0 0 300px 300px;
+  box-sizing: border-box;
+  left: 0;
+  top: 100%;
+}
+
+.semi-donut-model-2::before {
+  border-color: rgba(0, 0, 0, .15);
+  transform: rotate(180deg);
+}
+
+.semi-donut-model-2::after {
+  z-index: 3;
+  animation: 1s fillGraphAnimation ease-in;
+  transform: rotate(calc(1deg * (var(--percentage) * 1.8)));
+}
+
+
+@keyframes fillAnimation {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes fillGraphAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+</style>
+<body>
+  <div class="semi-donut margin" 
+     style="--percentage : 80; --fill: #FF3D00 ;">
+  HTML5
+</div>
+
+
+<div class="semi-donut-model-2 margin"
+     style="--percentage : 90; --fill: #039BE5 ;">
+  CSS3
+</div>
+
+
+
+</body>
+</html>

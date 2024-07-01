@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url('../font/Nexa-Bold.eot'); 
+    src: url('../font/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/Nexa-Bold.woff2') format('woff2'), 
+         url('../font/Nexa-Bold.woff') format('woff'),
+         url('../font/Nexa-Bold.ttf')  format('truetype'), 
+        
+  }
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Nexa-Bold", sans-serif;
+    background-color: #181025;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+.container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    background-color: #332941;
+    height: 50px;
+}
+header .content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+}
+header .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 8px;
+}
+header .links li{
+    text-transform: capitalize;
+    height: 50px;
+    line-height: 50px;
+   
+}
+header .links li a.linkimg{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+    margin-left: -10px;
+}
+header .links li a.nav{
+    height: 100%;
+    display: block;
+  
+    font-size: 9px;
+    font-weight: 500;
+color: white;
+}
+header .links li.folder{
+    display: block;
+  
+    font-size: 9px;
+    font-weight: 700;
+color: white;
+}
+header .links li a.active{
+   background-color: #181025;
+   padding: 0 10px;
+   color: #8a64fe;
+}
+
+
+header .links img{
+    width: 100%;
+    height: 100%;
+}
+header .right{
+   
+
+}
+header .links .folder{
+   
+    height: 60%;
+   
+}
+header .links .folder a{
+    background-color: #8866fb;
+    padding: 5px;
+    border-radius: 5px;
+    height: 60%;
+    color: white;
+   
+ }
+header .links .folder .en{
+    background-color: #241c31;
+   
+ }
+
+ /* start nav  */
+ nav{
+    margin-top: 30px;
+ }
+ nav .content ul{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+ }
+ nav .content ul li a{
+color: white;
+display: block;
+font-size: 9px;
+font-weight: 500;
+position: relative;
+ }
+ 
+ nav .content ul li a.active{
+    position: relative;
+ }
+ nav .content ul li a.active::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #32fc84;
+    bottom: -10px;
+ left: 50%;
+ border-radius: 5px;
+ transform: translateX(-50%);
+ }
+
+
+ .annonce{
+    background-image: linear-gradient(to right,#8f3cee, #557ddd);
+    margin-top: 10px;
+ }
+ .annonce .content, .annonce .content .text,.annonce .content .social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 5px;
+ }
+ .annonce .content .text{
+    gap: 5px;
+ }
+ .annonce .content .text i{
+    font-size: 15px;
+ }
+ .annonce .content .text p{
+font-size: 7px;
+text-transform: capitalize;
+font-weight: 500;
+ }
+ .annonce .content .social{
+font-size: 11px;
+gap: 5px;
+ }
+ .annonce .content .social a{
+    color: white;
+ }
+ /* end nav  */
+ /* start schema  */
+ .schema{
+    margin: 15px 0;
+ }
+ .schema .head{
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+
+ }
+ .schema .head h2{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+ }
+ .schema .head .setting,.beta .setting{
+ color: white;
+ background-color: #312842;
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+ }
+ .schema .scemaRank{
+    color: white;
+ }
+ .schema .scemaRank .ranhHead, .schema .scemaRank .rankcontent{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  gap: 8px;
+ }
+ .schema .scemaRank .ranhHead th,.schema .scemaRank td{
+   font-size: 11px;
+text-align: center;
+font-weight: 500;
+text-transform: capitalize;
+ }
+ .schema .scemaRank .rankcontent{
+  
+ }
+ .schema .scemaRank .rankcontent p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .schema .scemaRank .rankcontent p img{
+ width: 25px;
+ height: 25px;
+ }
+ table{
+    color: white;
+    text-align: center;
+    border-collapse:separate; 
+  border-spacing: 0 .5em;
+  /* border-collapse: collapse; */
+  width: 100%;
+  
+ }
+
+ td:first-child,
+ th:first-child {
+   border-radius: 10px 0 0 10px;
+ }
+ td:last-child,
+ th:last-child {
+   border-radius: 0 10px 10px 0;
+ }
+table .ranhHead{
+    height: 50px;
+}
+table th{
+    font-size: 7px;
+
+}
+table td{
+    font-size: 7px;}
+ table th,table td{
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+ }
+ .schema .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .schema .rankcontent{
+    color: white;
+    background-color: #332941;
+    border-radius: 5px;
+    text-transform: capitalize;
+    
+ }
+ .schema table td i{
+    color: #32fc84;
+ }
+ .schema .rankcontent td{
+    /* padding:0px 5px; */
+ }
+
+ .schema table img{
+    width: 25px;
+    height: 25px;
+    }
+
+ /* end schema  */
+ /* start uschema  */
+ .Uschema{
+    background-color: #332941;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
+ }
+ .Uschema .rankcontent{
+    background-color: #241c31;
+ }
+ .Uschema .Ufirst{
+    gap: 10px;
+ }
+ .Uschema .Ufirst img{
+    background-color: #181025;
+    padding: 5px;
+    border-radius: 5px;
+ }
+ .Uschema .first span{
+    margin: 10px 0;
+   
+ }
+ .Uschema .first span :last-child{
+color: #595065;
+font-size: 7px;
+ }
+ .Uschema .date{
+    color: #595065;
+    display: block;
+    text-align: start;
+    font-size: 7px;
+ }
+ .Uschema .Ufirst{
+
+ }
+ .Uschema .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+
+ }
+ .Uschema .btn button{
+background-color: #7603ff;
+color: white;
+border: none;
+width: 60%;
+border-radius: 6px;
+padding: 10px 0;
+font-size: 13px;
+font-weight: 500;
+
+ }
+ /* end uschema  */
+

@@ -1,0 +1,258 @@
+.beta{
+    margin-top: 16px;
+}
+.beta .content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.beta .content .auto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #332941;
+    border-radius: 20px;
+    height: 30px;
+    width: 35%;
+    padding: 5px 5px;
+    text-transform: capitalize;
+    padding-left: 10px;
+    color: white;
+}
+.beta .content .auto .text{
+    font-size: 10px;
+}
+.beta .content .auto .btnauto{
+    background-color: #7603ff;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 12px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 10px;
+}
+/* form // */
+.form{
+  
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+   
+}
+.form .content{
+    background-color: #241c31;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 10px;
+   padding: 20px 10px;
+   border-radius: 10px;
+   
+}
+.form .content .allCur{
+    background-color: #241c31;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap: 10px;
+   padding: 20px 10px;
+   border-radius: 10px;
+   position: relative;
+}
+.form .content .direc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    color: #241c31;
+    border-radius: 50%;
+    padding: 5px;
+}
+.form .content .currenc
+{
+    background-color: #332941;
+    border-radius: 5px;
+}
+.form .content .currenc .usd
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    height: 60px;
+   
+
+}
+.form .content .currenc .usd .doller,
+.form .content .currenc .usd .available
+{
+    display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-transform: capitalize;
+
+}
+.form .content .currenc .usd .doller .dolltext
+{
+   font-size: 10px;
+margin: 0;
+}
+.form .content .currenc .usd .doller .USDC
+{
+   font-size: 10px;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 3px;
+}
+.form .content .currenc .usd .available p
+{
+   font-size: 7px;
+   margin: 0;
+text-align: end;
+font-weight: bold;
+letter-spacing: .5px;
+}
+.form .content .currenc .usd .available h3
+{
+   font-size: 12px;
+   margin: 0;
+   text-align: end;
+
+
+}
+.form .content .currenc .usd .doller .USDC span{
+    padding: 10px;
+    display: block;
+    background: #010000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.form .content .currenc .usd .doller img{
+    width:15px;
+    height: 15px;
+
+  
+}
+.form .content .currenc .usd .doller .USDC .fa-dollar-sign{
+    padding: 10px;
+    display: block;
+    background: #8896f1;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+}
+.form .content .res{
+    background-color: #8b64fc;
+    margin: 10px auto;
+    font-size: 10px;
+    padding: 0px 7px;
+    border-radius: 5px;
+    letter-spacing: 1.1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.form .content .res i{
+    padding: 7px;
+    display: block;
+    background: #332941;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 7px;
+}
+.calculator{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.calculator .calc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.calculator .calc button{
+   background-color: transparent;
+   border: none;
+   color: white;
+   font-size: 15px;
+   font-weight: 900;
+   cursor: pointer;
+}
+.calculator .calc button.clos{
+    background-color: #54496b;
+    height: fit-content;
+   position: relative;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+z-index: 11;
+line-height: 10px;
+text-align: center;
+}
+.calculator .calc button.clos::before{
+   content: "";
+   position: absolute;
+   width: 12px;
+   height: 14px;
+   left: -7px;
+   top: 13%;
+   border-top: 1px solid transparent;
+   border-bottom: 1px solid transparent;
+   border-right: 1px solid transparent;
+   border-left: 1px solid transparent;
+   transform: rotate(45deg);
+
+    background-color:#54496b ;
+z-index: -1;
+}
+.form .wallet{
+    margin:10px auto;
+    width: 95%;
+    border-radius: 7px;
+    background-color: #7603ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form .wallet button{
+   background-color: transparent;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+   font-size: 11px;
+   font-weight: 600;
+   letter-spacing: .7px;
+    text-transform: capitalize;
+   
+
+    
+}
+/* form // */
