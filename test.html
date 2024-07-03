@@ -12,22 +12,30 @@
 	</head>
 	<style>
 		div{
-			width: 150px;
-			height: 50px;
-			position: relative;
+      display: flex;
+			/* width: 150px;
+			height: 50px; */
+			/* position: relative; */
 		}
+  
 		canvas{
   position: absolute;
   background: #111;
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
   left: 0;
   top: 0;
 }
+.c2{
+      background-color: red;
+      height: 10%;
+      width: 10%;
+    }
 	</style>
 	<body>
 		<div>
 			<canvas></canvas>
+			<canvas class="c2"></canvas>
 		</div>
 		
 		
@@ -35,17 +43,20 @@
 
 		<script>
 			
-text = '12.8765432431';  // The message displayed
-chars = '123456789.';  // All possible Charactrers
-scale = 10;  // Font size and overall scale
+      text = '50.450';  // The message displayed
+      chars = '0123456789.';  // All possible Charactrersrers
+scale = 50;  // Font size and overall scale
 breaks = 0.003;  // Speed loss per frame
 endSpeed = 0.05;  // Speed at which the letter stops
 firstLetter = 220;  // Number of frames untill the first letter stopps (60 frames per second)
 delay = 40;  // Number of frames between letters stopping
+canva = document.querySelectorAll('canvas');
+canva.forEach(element => {
+  canvas = element
+  console.log(canvas)
+});
 
 
-
-canvas = document.querySelector('canvas');
 ctx = canvas.getContext('2d');
 
 text = text.split('');

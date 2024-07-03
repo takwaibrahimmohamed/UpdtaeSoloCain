@@ -17,7 +17,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: "Nexa-Bold", sans-serif;
+    font-family: "Nexa-Bold", sans-serif !important;
     background-color: #181025;
     margin: 0;
     padding: 0;
@@ -107,8 +107,24 @@ justify-content: space-between;
 align-items: center;
 height: 18px;
 padding: 1px 0;
-gap: 5px;
+/* gap: 5px; */
 }
+header .right .personanimat{
+   position: relative;
+   width: 67px;
+   height: 100%;
+}
+header .right .personanimat canvas{
+   position: absolute;
+    /* background: #111; */
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 113;
+    padding: 0 2px;
+}
+
 header .right .person p{
    margin: 0;
 font-size: 8px;
@@ -391,7 +407,7 @@ font-weight: 500;
     
   }
   header .right .person{
- gap: 4px;
+ gap: 0px;
   }
   header .right .person p{
 
@@ -399,6 +415,9 @@ font-size: 7px !important;
 }
 }
 @media (min-width:370px){
+   header .right .personanimat{
+      width: 65px;
+   }
    header .links li a.nav{
       font-size: 11px;
    }

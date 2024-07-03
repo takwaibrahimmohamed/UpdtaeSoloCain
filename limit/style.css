@@ -1,6 +1,14 @@
-* {
-	font-family: Sans-Serif;
-}
+
+
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url('../font/Nexa-Bold.eot'); 
+    src: url('../font/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/Nexa-Bold.woff2') format('woff2'), 
+         url('../font/Nexa-Bold.woff') format('woff'),
+         url('../font/Nexa-Bold.ttf')  format('truetype'), 
+        
+  }
 
 /* h1 {
 	font-size: 1.5em;
