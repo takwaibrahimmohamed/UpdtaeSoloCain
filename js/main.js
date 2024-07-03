@@ -66,10 +66,10 @@ requestAnimationFrame(loop2 = function(){
   
   requestAnimationFrame(loop2);
 });
-
+// console.log(document.querySelectorAll("canvas")[1].className=="canv2")
 
 ////////////////////////
-if(document.querySelectorAll("canvas").length >1){
+if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("canvas")[1].className=="canv2" && document.querySelectorAll("canvas")[1]!==undefined){
   text = '12.8765421';  // The message displayed
   chars = '123456789.';  // All possible Charactrers
   scale = 12;  // Font size and overall scale
