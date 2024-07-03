@@ -256,3 +256,28 @@ z-index: -1;
     
 }
 /* form // */
+/* responsive */
+@media (min-width:370px){
+    .form .content .currenc .usd{
+        height: 65px;
+    }
+    .beta .content .auto {
+        width: 31%;
+    }
+    .beta .content .auto .text ,.beta .content .auto .btnauto,.form .content .currenc .usd .doller .dolltext ,.form .content .currenc .usd .doller .USDC
+,.form .content .res 
+        {
+        font-size: 11px;
+    }
+    .form .content .currenc .usd .available p {
+        font-size: 8px;
+    }
+    .calculator .calc button {
+        font-size: 20px;
+    }
+    .form .wallet button {
+        font-size: 13px;
+    }
+    
+}
+/* responsive */

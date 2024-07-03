@@ -380,3 +380,27 @@ footer button{
 	padding:7px 20px;
 }
 /* order  */
+
+
+/* responsiv */
+@media (min-width:370px){
+	.lemitChart .limitSOL .text,.lemitChart .limitSOL .num,.lemitChart .chartBar .bar i{
+		font-size: 11px;
+	}
+	.lemitChart .chartBar .bar p, .lemitChart .chartBar .bar select {
+		font-size: 13px;
+	}
+	.lemitChart .chartBar .chartImg {
+		width: 18px;
+		height: 18px;
+	}
+	.lemitChart .chartBar img {
+		width: 25px;
+		height: 25px;
+	}
+	.selling .content .head p, .selling .content .box p, .selling .box .usdc p,footer a{
+		font-size: 13px;
+	}
+}
+
+/* responsiv */

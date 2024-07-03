@@ -10,67 +10,99 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="icon" href="./favicon.ico"/>
 	</head>
+	<style>
+		div{
+			width: 150px;
+			height: 50px;
+			position: relative;
+		}
+		canvas{
+  position: absolute;
+  background: #111;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+	</style>
 	<body>
-		<h1>Chart.js - Financial chart</h1>
-		<p>See the <a href="https://github.com/chartjs/chartjs-chart-financial/tree/master/docs">source for this example</a>, <a href="https://github.com/chartjs/chartjs-chart-financial">README</a>, and <a href="https://www.chartjs.org/docs/">Chart.js docs</a> for more details.</p>
-		<h2>Sample Chart</h2>
-		<div style="width:1000px">
-			<canvas id="chart"></canvas>
-		</div>
 		<div>
-			Bar Type:
-			<select id="type">
-				<option value="candlestick" selected>Candlestick</option>
-				<option value="ohlc">OHLC</option>
-			</select>
-			Scale Type:
-			<select id="scale-type">
-				<option value="linear" selected>Linear</option>
-				<option value="logarithmic">Logarithmic</option>
-			</select>
-			Color Scheme:
-			<select id="color-scheme">
-				<option value="muted" selected>Muted</option>
-				<option value="neon">Neon</option>
-			</select>
-			Border:
-			<select id="border">
-				<option value="true" selected>Yes</option>
-				<option value="false">No</option>
-			</select>
-			Mixed:
-			<select id="mixed">
-				<option value="true">Yes</option>
-				<option value="false" selected>No</option>
-			</select>
-			<button id="update">Update</button>
-			<button id="randomizeData">Randomize Data</button>
+			<canvas></canvas>
 		</div>
-		<script type="text/javascript" src="./index.js"></script>
+		
 		
 
 
-		<script type='application/ld+json'>
-			{&quot;@context&quot;: &quot;http://schema.org&quot;,&quot;@type&quot;:
-				 &quot;BlogPosting&quot;,&quot;mainEntityOfPage&quot;:
-				  {&quot;@type&quot;: &quot;WebPage&quot;,&quot;@id&quot;:
-					 &quot;<data:post.url.canonical/>&quot;},&quot;headline&quot;:
-					  &quot;<data:post.title.escaped/>&quot;,&quot;description&quot;:
-					   &quot;<data:post.snippets.short.escaped/>&quot;,<b:if cond='data:post.labels'>
-						&quot;keywords&quot;:&quot;<b:loop index='l' values='data:post.labels' var='label'>
-							<data:label.name/><b:if cond='data:l != data:post.labels.length - 1'>,
+		<script>
+			
+text = '12.8765432431';  // The message displayed
+chars = '123456789.';  // All possible Charactrers
+scale = 10;  // Font size and overall scale
+breaks = 0.003;  // Speed loss per frame
+endSpeed = 0.05;  // Speed at which the letter stops
+firstLetter = 220;  // Number of frames untill the first letter stopps (60 frames per second)
+delay = 40;  // Number of frames between letters stopping
 
-							</b:if></b:loop>&quot;,</b:if>&quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
-							&quot;dateModified&quot;: &quot;<data:post.lastUpdated.iso8601/>&quot;,&quot;image&quot;:
-							 {&quot;@type&quot;: &quot;ImageObject&quot;,&quot;url&quot;: &quot;<b:eval expr='data:post.firstImageUrl ?
-							  resizeImage(data:post.firstImageUrl, 1200, &quot;1200:630&quot;) :
-							   &quot;https://lh3.googleusercontent.com/ULB6iBuCeTVvSjjjU1A-O8e9ZpVba6uvyhtiWRti_rBAs9yMYOFBujxriJRZ-A=w1200&quot;
-							   '/>&quot;,&quot;height&quot;: <b:eval expr='data:post.firstImageUrl ? 630 : 348'/>,&quot;width&quot;: 1200},&quot;publisher&quot;: 
-							   {&quot;@type&quot;: &quot;Organization&quot;,&quot;name&quot;: &quot;<data:blog.title/>&quot;,&quot;logo&quot;:
-								 {&quot;@type&quot;: &quot;ImageObject&quot;,&quot;url&quot;: 
-									&quot;https://lh3.googleusercontent.com/ULB6iBuCeTVvSjjjU1A-O8e9ZpVba6uvyhtiWRti_rBAs9yMYOFBujxriJRZ-A=h60&quot;,&quot;width&quot;:
-									 206,&quot;height&quot;: 60}},&quot;author&quot;: {&quot;@type&quot;: &quot;Person&quot;,&quot;jobTitle&quot;: 
-										&quot;Author&quot;,&quot;url&quot;: &quot;<b:if cond='data:post.author.profileUrl'><data:post.author.profileUrl/>
-										<b:else/>#</b:if>&quot;,&quot;name&quot;: &quot;<data:post.author.name/>&quot;}}</script>
+
+
+canvas = document.querySelector('canvas');
+ctx = canvas.getContext('2d');
+
+text = text.split('');
+chars = chars.split('');
+charMap = [];
+offset = [];
+offsetV = [];
+
+for(var i=0;i<chars.length;i++){
+  charMap[chars[i]] = i;
+}
+
+for(var i=0;i<text.length;i++){
+  var f = firstLetter+delay*i;
+  offsetV[i] = endSpeed+breaks*f;
+  offset[i] = -(1+f)*(breaks*f+2*endSpeed)/2;
+}
+
+(onresize = function(){
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+})();
+
+requestAnimationFrame(loop = function(){
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = '#622';
+  ctx.fillRect(0,(canvas.height-scale)/2,canvas.width,scale);
+  for(var i=0;i<text.length;i++){
+    ctx.fillStyle = '#ccc';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'center';
+    ctx.setTransform(1,0,0,1,Math.floor((canvas.width-scale*(text.length-1))/2),Math.floor(canvas.height/2));
+    var o = offset[i];
+    while(o<0)o++;
+    o %= 1;
+    var h = Math.ceil(canvas.height/2/scale)
+    for(var j=-h;j<h;j++){
+      var c = charMap[text[i]]+j-Math.floor(offset[i]);
+      while(c<0)c+=chars.length;
+      c %= chars.length;
+      var s = 1-Math.abs(j+o)/(canvas.height/2/scale+1)
+      ctx.globalAlpha = s
+      ctx.font = scale*s + 'px Helvetica'
+      ctx.fillText(chars[c],scale*i,(j+o)*scale);
+    }
+    offset[i] += offsetV[i];
+    offsetV[i] -= breaks;
+    if(offsetV[i]<endSpeed){
+      offset[i] = 0;
+      offsetV[i] = 0;
+    }
+  }
+  
+  requestAnimationFrame(loop);
+});
+		</script>
 	</body>
 </html>

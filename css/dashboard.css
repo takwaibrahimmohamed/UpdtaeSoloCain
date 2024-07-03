@@ -82,6 +82,7 @@ justify-content: space-between;
 align-items: flex-start;
 position: relative;
 }
+
 .charts .box,
 .charts .box-copy {
     position: relative;
@@ -99,6 +100,35 @@ transform: translateY(-40%);
   height: 100%;
   top: 100%;
   z-index: 2;
+
+}
+.charts .numgraph{
+  /* width: 50px;
+  height: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  position: absolute;
+  background-color: #211d2e;
+  border-radius: 5px;
+  bottom: 13%;
+  left: 15%;
+  padding:3px 7px;
+
+  z-index: 111;
+
+}
+.charts .numgraph p{
+  margin: 0;
+color: white;
+font-size: 8px;
+font-weight: 700;
+}
+.charts .numgraph p:last-child{
+
+color: #9892a0;
+font-size: 6px;
 
 }
 
@@ -426,6 +456,21 @@ height: 30px;
   .charts .circle .drawcircl p{
     margin: 0;
   }
+  .charts .circle .drawcircl .drawcirclanimat{
+   position: relative;
+   width: 95%;
+   height: 100%;
+  }
+  .charts .circle .drawcircl .drawcirclanimat canvas{
+    position: absolute;
+    /* background: #111; */
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 113;
+  }
+  
   .charts .circle .bullet{
 border: 1px solid #21192e;
 display: flex;
@@ -500,7 +545,7 @@ text-transform: capitalize;
     display: flex;
     flex-direction: column;
 gap: 2px;
-margin-bottom: 10px;
+/* margin-bottom: 10px; */
 }
 .collectbonus .result .res{
     display: flex;
@@ -510,6 +555,7 @@ margin-bottom: 10px;
    position: relative;
    font-size: 10px;
    background-color: #332941;
+   text-transform: capitalize;
 }
 /* .collectbonus .result .res:not(:last-child)::before{
     content: "";

@@ -38,6 +38,7 @@ a{
     margin-left: auto;
     margin-right: auto;
 }
+
 header{
     background-color: #332941;
     height: 50px;
@@ -46,7 +47,7 @@ header .content{
 display: flex;
 justify-content: space-between;
 align-items: center;
-gap: 15px;
+gap: 5px;
 }
 header .links{
     display: flex;
@@ -97,6 +98,35 @@ header .right{
    
 
 }
+header .right .person{
+   background-color: #000;
+border-radius: 5px;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 18px;
+padding: 1px 0;
+gap: 5px;
+}
+header .right .person p{
+   margin: 0;
+font-size: 8px;
+padding: 5px;
+padding-left: 0;
+}
+header .right .person .usericon{
+  background-color: #241c31;
+ 
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+padding: 5px;
+color: #09cc6a;
+}
 header .links .folder{
    
     height: 60%;
@@ -131,6 +161,7 @@ display: block;
 font-size: 9px;
 font-weight: 500;
 position: relative;
+text-transform: capitalize;
  }
  
  nav .content ul li a.active{
@@ -346,3 +377,55 @@ font-weight: 500;
  }
  /* end uschema  */
 
+/* responsive */
+@media (max-width:320px){
+   header .links li a.nav{
+   
+      font-size: 7px !important;
+     
+  }
+  header .links li.folder{
+    
+    
+      font-size: 7px !important;
+    
+  }
+  header .right .person{
+ gap: 4px;
+  }
+  header .right .person p{
+
+font-size: 7px !important;
+}
+}
+@media (min-width:370px){
+   header .links li a.nav{
+      font-size: 11px;
+   }
+   header .right .person p{
+      font-size: 10px;
+   }
+   nav .content ul li a{
+      font-size: 12px;
+     
+   }
+   .annonce .content .text p {
+      font-size: 10px;
+   }
+   .annonce .content .social{
+      font-size: 13px;
+   }
+   .schema .head h2 {
+      font-size: 13px;
+   }
+   table th {
+      font-size: 8px;
+   }
+   table td {
+      font-size: 9px;
+   }
+   .Uschema .first span :last-child{
+      font-size: 8px;
+   }
+}
+/* responsive */
