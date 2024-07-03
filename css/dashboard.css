@@ -471,12 +471,24 @@ color: white;
 gap: 12px;
 
 }
+.collectbonus .collectbox{
+    display: flex;
+flex-direction: column;
+color: white;
+gap: 2px;
+}
+.collectbonus .colcothead{
+    display: flex;
+    background-color: #251d32;
+
+padding: 9px 15px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+justify-content: space-between;
+align-items: center;
+}
 .collectbonus .content .head{
-background-color: #332941;
-margin: 0;
-padding: 7px 15px;
-border-top-left-radius: 8px;
-border-top-right-radius: 8px;
+    margin: 0;
 font-size: 12px;
 font-weight: 700;
 text-transform: capitalize;
@@ -487,25 +499,26 @@ text-transform: capitalize;
 .collectbonus .result{
     display: flex;
     flex-direction: column;
-gap: 10px;
+gap: 2px;
 margin-bottom: 10px;
 }
 .collectbonus .result .res{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
+    padding: 9px 15px;
    position: relative;
    font-size: 10px;
+   background-color: #332941;
 }
-.collectbonus .result .res:not(:last-child)::before{
+/* .collectbonus .result .res:not(:last-child)::before{
     content: "";
     position: absolute;
     width: 90%;
     height: 1px;
     background-color: #332941;
     bottom: -5px;
-}
+} */
 .collectbonus .result .res .date{
     display: flex;
     justify-content: space-between;

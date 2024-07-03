@@ -1,0 +1,382 @@
+* {
+	font-family: Sans-Serif;
+}
+
+/* h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.25em;
+} */
+.lemitChart{
+
+	
+	color: #898498;
+	padding: 10px 0;
+	margin-top: 30px;
+}
+.lemitChart .content{
+	border: 3px solid #241c31;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.lemitChart .limitSOL{
+	display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.lemitChart .limitSOL .limitBox{
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 10px;
+	padding: 0 10px;
+}
+.lemitChart .limitSOL .limitBox .arrow{
+	display: flex;
+	flex-direction: column;
+	
+}
+.lemitChart .limitSOL .limitBox .arrow i{
+	height: 7px;
+	font-size: 10px;
+	
+}
+.lemitChart .limitSOL .imag{
+	display: flex;
+	align-items: center;
+}
+.lemitChart .limitSOL img{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
+}
+.lemitChart .limitSOL .dolrimg{
+	background-color: #454e81;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -5px;
+}
+.lemitChart .limitSOL .text{
+	font-size: 10px;
+	font-weight: 700;
+}
+.lemitChart .limitSOL .num{
+	font-size: 10px;
+	font-weight: 700;
+}
+.lemitChart .limitSOL .num:last-of-type{
+color: #704d55;
+}
+.lemitChart .chartBar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5px;
+	color: #898498;
+}
+.lemitChart .chartBar .bar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 7px;
+}
+.lemitChart .chartBar img{
+	width: 20px;
+	height: 20px;
+}
+.lemitChart .chartBar .chartImg{
+	width: 15px;
+	height: 15px;
+}
+.lemitChart .chartBar select{
+	background-color: transparent;
+	border: none;
+	color:#898498;
+
+}
+.lemitChart .chartBar  .bar i{
+	font-size: 10px;
+	color: #898498;
+}
+.lemitChart .chartBar  .bar p,.lemitChart .chartBar  .bar select{
+font-size: 12px;
+}
+.lemitChart .barCnv{
+	position: relative;
+}
+.lemitChart .numcanv{
+	position: absolute;
+	left: 10px;
+	top:0;
+	color: #463549;
+	font-size: 12px;
+	margin: 0;
+	z-index: 111;
+	background-color: #160f21;
+}
+.lemitChart .setimg{
+position: absolute;
+right: 5px;
+bottom: 3px;
+font-size: 15px;
+color: gray;
+}
+.lemitChart .flowimg{
+	position: absolute;
+	bottom: 35px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid gray;
+	left: 31px;
+padding: 3px;
+}
+.lemitChart .grapgInfo{
+	font-size: 12px;
+	color: #898498;
+	text-transform: capitalize;
+	line-height: 1.5;
+	padding: 5px;
+	margin: 0;
+}
+
+
+/* selling */
+.secletcontent{
+	position: relative;
+}
+.secletcontent .direct{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #e4daf2;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-35%);
+}
+.selling{
+margin-bottom: 10px;
+}
+.selling .content{
+	background-color: #241c31;
+	border-radius: 7px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding:20px 10px;
+}
+
+.selling .content .head .wallet i{
+	margin-right: 5px;
+	
+}
+.selling .content .head,.selling .content .box{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	
+	
+}
+.selling .content .box{
+	background-color: #332941;
+	padding: 10px 15px;
+	border-radius: 7px;
+}
+.selling .content .head p{
+
+}
+.selling .content .box p{}
+.selling .content .head p,.selling .content .box p,.selling .box .usdc p{
+margin: 0;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.selling .box .usdc{
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	gap: 5px;
+	background-color: #241c31;
+	padding:5px 10px;
+	border-radius: 7px;
+}
+.selling .box .usdc .dolr{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #0066ce;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+}
+.selling .box .usdc i{
+	margin: -1px;
+}
+.selling .coin{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: end;
+}
+.selling .coin .num{
+	font-weight: 700 !important;
+font-size: 13px;
+}
+.selling .box .buy{
+	display: flex;
+	flex-direction: column;
+	gap:5px;
+	font-size: 13px;
+}
+.selling .box  .buytext{
+	font-weight: 500 !important;
+}
+.selling .box  .buynum{
+	font-weight: 700 !important;
+	font-size: 13px !important;
+}
+.selling .marketcoin{
+	font-weight: 600 !important;
+	font-size: 12px !important;
+}
+.selling .market{
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.selling .market span{
+	border-bottom: 1.1px solid #8b8199;
+}
+.selling .market i{
+	margin-bottom: 4px;
+}
+.selling .box:nth-child(3){
+	align-items: flex-start
+
+}
+.selling .gradbox{
+	position: relative;
+	border-radius: 0;
+	color: #6f677c;
+}
+.selling .gradbox .boxTxt{
+	text-transform:none !important;
+}
+.selling .gradbox .boxTxt span{
+	margin-left: 5px;
+}
+.selling .gradbox .boxTxt span a{
+	color: #6f677c;
+	text-decoration:underline;
+
+}
+.selling .gradbox::before{
+
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 6px; 
+	padding: 2px; 
+	background:linear-gradient(45deg,#7744d3,#2b5779); 
+	-webkit-mask: 
+	   linear-gradient(#fff 0 0) content-box, 
+	   linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+			mask-composite: exclude; 
+	
+}
+.selling .colletwallet{
+	background-color: #7603ff;
+	color: white;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: capitalize;
+	border: none;
+	padding: 10px 0;
+	border-radius: 7px;
+	cursor: pointer;
+}
+/* selling */
+/* order  */
+.order{
+	margin-top: 20px;
+}
+.order .container{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.order .container p{
+color: white;
+background-color: #241c31;
+border-radius: 15px;
+margin: 0;
+padding: 10px;
+font-size: 12px;
+text-transform: capitalize;
+font-weight: 500;
+}
+.order .container p:last-child{
+	background-color: transparent;
+	color: #b1b1b1;
+}
+/* order  */
+/* order  */
+.refresh{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.refresh .container{
+display: flex;
+align-items: center;
+gap: 10px;
+justify-content: end;
+}
+.refresh .container p{
+color: white;
+border: 1.5px solid white;
+border-radius: 7px;
+margin: 0;
+padding: 10px;
+font-size: 12px;
+text-transform: capitalize;
+font-weight: 500;
+}
+footer{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 30px;
+}
+footer a{
+	color: white;
+	font-size: 12px;
+	text-decoration:underline;
+}
+footer button{
+	width: fit-content;
+	margin: 0 auto;
+	border: none;
+	background-color: #7603ff;
+	border-radius: 15px;
+	color: white;
+	padding:7px 20px;
+}
+/* order  */
