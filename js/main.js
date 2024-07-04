@@ -4,7 +4,7 @@ scale2 = 9;  // Font size and overall scale
 breaks2 = 0.003;  // Speed loss per frame
 endSpeed2 = 0.05;  // Speed at which the letter stops
 firstLetter2 = 220;  // Number of frames until the first letter stops (60 frames per second)
-delay2 = 0.5;  // Number of frames between letters stopping
+delay2 = 0.8;  // Number of frames between letters stopping
 
 
 
@@ -70,9 +70,9 @@ requestAnimationFrame(loop2 = function(){
 
 ////////////////////////
 if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("canvas")[1].className=="canv2" && document.querySelectorAll("canvas")[1]!==undefined){
-  text = '12.8765421';  // The message displayed
-  chars = '123456789.';  // All possible Charactrers
-  scale = 12;  // Font size and overall scale
+  text = '12.8765421SOL';  // The message displayed
+  chars = '123456789.SOL';  // All possible Charactrers
+  scale = 9;  // Font size and overall scale
   breaks = 0.003;  // Speed loss per frame
   endSpeed = 0.05;  // Speed at which the letter stops
   firstLetter = 220;  // Number of frames untill the first letter stopps (60 frames per second)
@@ -112,7 +112,7 @@ if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("c
     ctx.fillStyle = 'transparent';
     ctx.fillRect(0,(canvas.height-scale)/2,canvas.width,scale);
     for(var i=0;i<text.length;i++){
-      ctx.fillStyle = '#ccc';
+      ctx.fillStyle = 'white';
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'center';
       ctx.setTransform(1,0,0,1,Math.floor((canvas.width-scale*(text.length-1))/2),Math.floor(canvas.height/2));

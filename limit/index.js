@@ -1,5 +1,5 @@
 
-var barCount = 35;
+var barCount = 30;
 var initialDateStr = new Date().toUTCString();
 
 var ctx = document.getElementById('chart').getContext('2d');

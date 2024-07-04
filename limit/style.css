@@ -46,6 +46,7 @@ align-items: center;
 .lemitChart .limitSOL .limitBox .arrow{
 	display: flex;
 	flex-direction: column;
+	color: white;
 	
 }
 .lemitChart .limitSOL .limitBox .arrow i{
@@ -71,15 +72,18 @@ align-items: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: white;
 	margin-left: -5px;
 }
 .lemitChart .limitSOL .text{
 	font-size: 10px;
 	font-weight: 700;
+	color: white;
 }
 .lemitChart .limitSOL .num{
 	font-size: 10px;
 	font-weight: 700;
+	color: white;
 }
 .lemitChart .limitSOL .num:last-of-type{
 color: #704d55;
@@ -115,8 +119,13 @@ color: #704d55;
 	font-size: 10px;
 	color: #898498;
 }
+.lemitChart .chartBar  .bar p{
+	color: white;
+
+}
 .lemitChart .chartBar  .bar p,.lemitChart .chartBar  .bar select{
 font-size: 12px;
+
 }
 .lemitChart .barCnv{
 	position: relative;
@@ -393,18 +402,24 @@ footer button{
 /* responsiv */
 @media (min-width:370px){
 	.lemitChart .limitSOL .text,.lemitChart .limitSOL .num,.lemitChart .chartBar .bar i{
-		font-size: 11px;
-	}
-	.lemitChart .chartBar .bar p, .lemitChart .chartBar .bar select {
 		font-size: 13px;
 	}
+	.lemitChart .chartBar .bar p, .lemitChart .chartBar .bar select {
+		font-size: 14px;
+	}
+	.lemitChart .grapgInfo{
+		font-size: 11px;
+	}
+	.lemitChart .chartBar .bar{
+		gap: 5px;
+	}
 	.lemitChart .chartBar .chartImg {
-		width: 18px;
-		height: 18px;
+		width: 30px;
+		height: 30px;
 	}
 	.lemitChart .chartBar img {
-		width: 25px;
-		height: 25px;
+		width: 35px;
+		height: 35px;
 	}
 	.selling .content .head p, .selling .content .box p, .selling .box .usdc p,footer a{
 		font-size: 13px;

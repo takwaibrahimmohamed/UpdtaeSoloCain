@@ -359,7 +359,7 @@ font-size: 6px;
     height: 45px;
   }
   .semi-donut-model-2::before {
-    border-color: rgba(0, 0, 0, .15);
+    border-color: black;
     transform: rotate(180deg);
   }
   
@@ -368,8 +368,122 @@ font-size: 6px;
     animation: 1s fillGraphAnimation ease-in;
     transform: rotate(calc(1deg * (var(--percentage) * 1.8)));
   }
+ .simiCircle .movetop{
+  display: block;
+  position: absolute;
+  background-color: #7602ff;
+  width: 7px;
+  height: 4px;
+  top: 11px;
+  /* right: -12px; */
+  left: 66px;
+  z-index: 112;
+  border-radius: 50%;
+  animation: 1s movetopAnim ease-in;
+ }
+ .simiCircle .movebottom{
+  display: block;
+  position: absolute;
+  background-color: #7602ff;
+  width: 7px;
+  height: 4px;
+  bottom: 12px;
+  /* right: -12px; */
+  left: 78px;
+  z-index: 112;
+  border-radius: 50%;
+  animation: 1s movebottomAnim ease-in;
+ }
+ .simiCircle .greentop{
+  display: block;
+  position: absolute;
+  background-color: #56c327;
+  width: 5px;
+  height: 4px;
+  top: 20px;
+  /* right: -12px; */
+  left: 69px;
+  z-index: 112;
+  border-radius: 50%;
+  animation: 1s movetopAnim ease-in;
+ }
+ .simiCircle .greenbottom{
+  display: block;
+  position: absolute;
+  background-color: #56c327;
+  width: 7px;
+    height: 4px;
+    bottom: 23px;
+    /* right: -12px; */
+    left: 80px;
+  z-index: 112;
+  border-radius: 50%;
+  animation: 1s movebottomAnimgren ease-in;
+ }
+ .simiCircle .graybottom{
+  display: block;
+    position: absolute;
+    background-color: black;
+    width: 7px;
+    height: 5px;
+    bottom: 20px;
+    /* right: -12px; */
+    left: 67px;
+    /* z-index: 112; */
+    border-radius: 50%;
+ 
+ }
+ .simiCircle .graybottom2{
+  display: block;
+    position: absolute;
+    background-color: black;
+    width: 7px;
+    height: 4px;
+    bottom: 10px;
+    /* right: -12px; */
+    left: 64px;
+    /* z-index: 112; */
+    border-radius: 50%;
+ 
+ }
+ @keyframes movetopAnim{
+  0%{
+   
+display: none;
+  }
+ 
+ }
+ @keyframes movebottomAnim{
+  0%{
+    top: 11px;
+    left: 67px;
+display: none;
+  }
+  100%{
+    bottom: 12px;
+    /* left: 69px; */
+    width: 0;
+    height: 0;
+    background-color: transparent;
   
-  
+  }
+ }
+ @keyframes movebottomAnimgren{
+  0%{
+    top: 20px;
+    left: 69px;
+display: none;
+  }
+  100%{
+    bottom: 22px;
+    /* left: 69px; */
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    z-index: -1;
+  opacity: 0;
+  }
+ }
   @keyframes fillAnimation {
     0% {
       transform: rotate(-45deg);
@@ -419,7 +533,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-border: 2px solid #21182d;
+border: 1px solid black;
 font-size: 10px;
 color: white;
 width: 125px;
@@ -433,23 +547,23 @@ height: 30px;
   .charts .circle .drawcircl::before{
     content: "";
     position: absolute;
-    width: 15px;
-    height: 35px;
+    width: 17px;
+    height: 39px;
     background-color: #241c31;
     left: -11px;
     border-radius: 10px;
-    border: 2px solid #21182d;
+    border: 1px solid black;
     border-right: none;
   }
   .charts .circle .drawcircl::after{
     content: "";
     position: absolute;
-    width: 15px;
-    height: 35px;
+    width: 17px;
+    height: 39px;
     background-color: #241c31;
     right: -11px;
     border-radius: 10px;
-    border: 2px solid #21182d;
+    border: 1px solid black;
     border-left: none;
   
   }
@@ -470,26 +584,29 @@ height: 30px;
     top: 0;
     z-index: 113;
   }
-  
+  .charts .circle{
+    
+  }
   .charts .circle .bullet{
-border: 1px solid #21192e;
+border: 1px solid #352a46;
 display: flex;
-justify-content: space-between;
+justify-content: start;
 align-items: center;
-width: 50px;
-height: 16px;
+width: 34px;
+height: 12px;
 padding: 5px;
 color: white;
 margin: 0 auto;
-
+border-radius: 3px;
+gap: 2px;
   }
   .charts .circle .bullet .firstBullet,
   .charts .circle .bullet .secondBullet
   {
     border-radius: 50%;
     display: block;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: #57c225;
   
   }
@@ -497,12 +614,13 @@ margin: 0 auto;
     background-color: #7501ff;
   }
   .charts .circle .bullet .arrow{
-    border-left:1px solid #21192e;
+    border-left:1px solid #352a46;
     font-size: 11px;
     padding-left: 5px;
+    display: flex;
   }
   .charts .circle .bullet span i{
-    font-size: 10px;
+    font-size: 4px;
   }
 /* charts */
 /*collectbonus */
@@ -694,4 +812,48 @@ padding: 0;
     margin-bottom: 10px;
   }
     
+}
+@media (min-width:370px){
+  .DashProfit .walletBallance .profText{
+    font-size: 12px;
+  }
+  .DashProfit .walletBallance .profhead{
+font-size: 20px;
+  }
+  .DashProfit .wither .text {
+    font-size: 17px;
+  }
+  .DashProfit .wither .btnWither{
+    font-size: 12px;
+    padding: 5px 40px;
+  }
+  .charts .content .dashtext{
+    font-size: 13px;
+  }
+  .collectbonus .content .head{
+    font-size: 14px;
+  }
+  .collectbonus .result .res{
+    font-size: 11px;
+  }
+  .collectbonus .bonustext{
+    font-size: 10px;
+  }
+  .collectbonus .colect h3{
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .collectbonus .colect p{
+    font-size: 13px;
+  }
+  .participation h3{
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .participation .content .rankcontent td {
+    font-size: 10.5px;
+  }
+  .participation .content .rankcontent .date{
+    font-size: 6.6px;
+  }
 }

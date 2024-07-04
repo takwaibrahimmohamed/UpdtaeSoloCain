@@ -183,9 +183,9 @@ letter-spacing: .5px;
 }
 .calculator{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 20px;
+  
 }
 .calculator .calc{
     display: flex;
@@ -259,15 +259,25 @@ z-index: -1;
 /* responsive */
 @media (min-width:370px){
     .form .content .currenc .usd{
-        height: 65px;
+        height: 70px;
     }
     .beta .content .auto {
         width: 31%;
     }
-    .beta .content .auto .text ,.beta .content .auto .btnauto,.form .content .currenc .usd .doller .dolltext ,.form .content .currenc .usd .doller .USDC
-,.form .content .res 
+    .beta .content .auto .text ,.beta .content .auto .btnauto,.form .content .currenc .usd .doller .dolltext 
+
         {
-        font-size: 11px;
+        font-size: 12px;
+    }
+    .form .content .currenc .usd .doller .USDC{
+        font-size: 14px;
+    }
+    .form .content .res{
+        font-size: 10px;
+        height: 21px;
+    }
+    .form .content .currenc .usd .available h3{
+        font-size: 16px;
     }
     .form .content .currenc .usd .available p {
         font-size: 8px;

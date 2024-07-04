@@ -29,7 +29,7 @@ border: none;
 border-radius: 7px;
 padding: 10px 20px;
 color: white;
-text-transform: capitalize;
+text-transform: uppercase;
 font-size: 11px;
 
 }
@@ -83,6 +83,12 @@ table td{
 .profit table .profhead span,.referal .profhead span{
    font-size: 9px;
 }
+.profit .center{
+  text-align: center;
+}
+.profit .end{
+  text-align: end;
+}
 /* profit  */
 /* .referal  */
 .referal table{
@@ -125,4 +131,30 @@ padding: 0 20px;
     text-align: end;
 }
 /* .referal  */
+
+@media (min-width:370px){
+  .overall .overallText, .profit .profitText {
+    font-size: 13.5px;
+  }
+  .overall .wither .text{
+    font-size: 20px;
+  }
+  .overall .wither .btnWither{
+     font-weight: 700;
+     font-size: 14px;
+     padding: 10px 30px;
+  }
+  .profit table .profhead, .referal .profhead{
+    font-size: 16px;
+    font-weight: 900;
+  
+  }
+  .profit tbody td{
+    font-size: 13px;
+  }
+  .profit tbody td .date{
+    font-size: 10px;
+   
+  }
+}
 
