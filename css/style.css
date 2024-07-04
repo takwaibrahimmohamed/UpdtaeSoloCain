@@ -124,6 +124,8 @@ header .right .personanimat canvas{
     top: 0;
     z-index: 113;
     padding: 0 3px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 header .right .person p{

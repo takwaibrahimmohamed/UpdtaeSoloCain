@@ -27,9 +27,14 @@ for(var i=0;i<text2.length;i++){
   offset2[i] = -(1+f)*(breaks2*f+2*endSpeed2)/2;
 }
 
-(onresize = function(){
+// (onresize = function(){
+//   canvas2.width = canvas2.clientWidth;
+//   canvas2.height = canvas2.clientHeight;
+// })();
+(onresize = function() {
   canvas2.width = canvas2.clientWidth;
   canvas2.height = canvas2.clientHeight;
+  ctx2.scale(canvas2.width / canvas2.clientWidth, canvas2.height / canvas2.clientHeight);
 })();
 
 requestAnimationFrame(loop2 = function(){
@@ -40,6 +45,7 @@ requestAnimationFrame(loop2 = function(){
   ctx2.fillRect(0,(canvas2.height-scale2)/2,canvas2.width,scale2);
   for(var i=0;i<text2.length;i++){
     ctx2.fillStyle = 'white';
+    ctx2.textRendering = 'optimizeLegibility';
     ctx2.textBaseline = 'middle';
     ctx2.textAlign = 'center';
     ctx2.setTransform(1,0,0,1,Math.floor((canvas2.width-scale2*(text2.length-0.5))/2),Math.floor(canvas2.height/2));
@@ -53,7 +59,8 @@ requestAnimationFrame(loop2 = function(){
       c %= chars2.length;
       var s = 1-Math.abs(j+o)/(canvas2.height/2/scale2+1)
       ctx2.globalAlpha = s
-      ctx2.font = scale2*s + 'px Helvetica'
+      // ctx2.font = scale2*s + 'px Helvetica'
+      ctx2.font = scale2*s + 'px Arial';
       ctx2.fillText(chars2[c],scale2*i,(j+o)*scale2);
     }
     offset2[i] += offsetV2[i];
@@ -100,9 +107,14 @@ if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("c
     offset[i] = -(1+f)*(breaks*f+2*endSpeed)/2;
   }
   
-  (onresize = function(){
+  // (onresize = function(){
+  //   canvas.width = canvas.clientWidth;
+  //   canvas.height = canvas.clientHeight;
+  // })();
+  (onresize = function() {
     canvas.width = canvas.clientWidth;
     canvas.height = canvas.clientHeight;
+    ctx.scale(canvas.width / canvas.clientWidth, canvas.height / canvas.clientHeight);
   })();
   
   requestAnimationFrame(loop = function(){
@@ -113,6 +125,7 @@ if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("c
     ctx.fillRect(0,(canvas.height-scale)/2,canvas.width,scale);
     for(var i=0;i<text.length;i++){
       ctx.fillStyle = 'white';
+      ctx.textRendering = 'optimizeLegibility';
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'center';
       ctx.setTransform(1,0,0,1,Math.floor((canvas.width-scale*(text.length-1))/2),Math.floor(canvas.height/2));
@@ -126,7 +139,8 @@ if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("c
         c %= chars.length;
         var s = 1-Math.abs(j+o)/(canvas.height/2/scale+1)
         ctx.globalAlpha = s
-        ctx.font = scale*s + 'px Helvetica'
+        // ctx.font = scale*s + 'px Helvetica'
+        ctx.font = scale*s + 'px Arial';
         ctx.fillText(chars[c],scale*i,(j+o)*scale);
       }
       offset[i] += offsetV[i];
