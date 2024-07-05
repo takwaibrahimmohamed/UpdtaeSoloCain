@@ -1,34 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semi-Circle Progress Bar</title>
-  <style>
-.semi-donut-model-2{
-	width: 50px;
-	height: 100px;
-	/* background-color: red; */
-	border: 5px solid green;
-	fill: #7602ff;
-
-	border-left: none;
-	border-top-left-radius: 50px;
-	border-bottom-left-radius: 50px;
-	/* border-top-right-radius: 30px; */
-	/* border-bottom-right-radius: 10px; */
-	border-bottom-right-radius: 90px;
-	border-top-right-radius: 90px;
+    <head>
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+      </head>
+      <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-  </style>
-</head>
+
+html {
+  font-size: 1vw;
+}
+
+body {
+  padding: 2rem;
+  font-family: "Roboto";
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  font-family: "Roboto";
+}
+
+.progress-section {
+  width: 100%;
+  max-width: 65vw;
+  border-radius: 40px;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  box-shadow: 0px 1px 10px 0px #0000001f;
+}
+
+.progress-section img {
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.progress-section .title {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.progress-section .task-progress {
+  margin: 1.5rem 0;
+}
+
+.progress-section .task-progress p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #525252;
+  font-size: 3rem;
+}
+
+.progress-section span {
+  color: #525252;
+}
+
+.progress-section .progress {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+  height: 1rem;
+}
+
+.progress-section .progress::-webkit-progress-bar {
+  background-color: #f0f0f0;
+}
+
+.progress-section .progress::-webkit-progress-bar,
+.progress-section .progress::-webkit-progress-value {
+  border-radius: 100px;
+}
+
+.progress-section .progress::-moz-progress-bar {
+  border-radius: 100px;
+}
+
+.progress-section .progress1::-webkit-progress-value {
+  background: #185ee2;
+}
+
+.progress-section .progress2::-webkit-progress-value {
+  background: #ffb453;
+}
+
+.progress-section .progress3::-webkit-progress-value {
+  background: #18e23c;
+}
+      </style>
+    
 <body>
-	<div class="semi-donut-model-2"
-	style="--percentage : 90; --fill: #7602ff ;">
-	
-	 </div>
-  <script>
-  
-  </script>
+    <div class="progress-section" data-aos="fade-left" data-aos-once="true">
+      
+      
+    
+        <div class="task-progress">
+          <p>
+            <span>36/100</span>
+          </p>
+          <progress class="progress progress1" max="100" value="36"></progress>
+        </div>
+        <div class="task-progress">
+          <p>
+            <span>100/1000</span>
+          </p>
+          <progress class="progress progress3" max="100" value="10"></progress>
+        </div>
+      </div>
 </body>
 </html>

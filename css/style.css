@@ -21,6 +21,7 @@ body{
     background-color: #181025;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 ul{
     list-style:none;
@@ -232,6 +233,10 @@ gap: 5px;
  /* start schema  */
  .schema{
     margin: 15px 0;
+    margin-top: -10px;
+    z-index: 112;
+    position: relative;
+
  }
  .schema .head{
 display: flex;
@@ -400,6 +405,331 @@ font-weight: 500;
 
  }
  /* end uschema  */
+ /* master */
+.master{
+   margin-top: 25px;
+}
+.master .content{
+   color: white;
+   
+}
+.master .head{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   text-transform: capitalize;
+}
+.master .head h3,.master .head p{
+   margin: 0;
+
+}
+
+.master .head h3{
+   font-size: 14px;
+}
+.master .head h3 span{
+   color: #1fa15b;
+}
+.master .head p{
+   font-size: 10px ;
+   margin-bottom: 10px;
+}
+.master .masterprogress{
+   background-color: #332941;
+   padding:10px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 70px;
+   justify-content: center;
+}
+.master .masterprogress:last-child{
+   
+   padding:15px 10px;
+   height: 85px;
+}
+.master .progress {
+   width: 100%;
+   -webkit-appearance: none;
+   appearance: none;
+   border: none;
+   border-radius: 10px;
+   height: .5rem;
+ }
+ 
+ .master .progress::-webkit-progress-bar {
+   background-color: black;
+  
+ }
+ 
+ .master .progress::-webkit-progress-bar,
+ .master .progress::-webkit-progress-value {
+   border-radius: 5px;
+ }
+ 
+ .master .progress::-moz-progress-bar {
+   border-radius: 10px;
+   
+ }
+ 
+ .master .progress1::-webkit-progress-value {
+   background: #ffc33a;
+  
+ }
+ 
+.master .progress2::-webkit-progress-value {
+   background: #34fb84;
+ }
+ 
+
+.master .masterprogress .info{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.master .masterprogress .info p{
+   font-size: 11px;
+   margin: 0;
+}
+.master .masterprogress .info .invest{
+color: #d84558;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span{
+color: #d84558;
+border-radius: 50%;
+border: 1px solid #d84558;
+display: block;
+width: 16px;
+height: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span i{
+font-size: 8px;
+}
+.master .masterprogress:last-child .info{
+   color: #34fb84;
+  
+}
+.master .masterprogress:last-child .info p{
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+  
+}
+.master .masterprogress:last-child .info p span{
+   border: 1px solid #34fb84;
+   color: #34fb84;
+}
+ /* master */
+ /* secarchAddress */
+ .secarchAddress{
+   background-color: #241c31;
+   margin-top: 30px;
+   position: relative;
+   padding-bottom: 50px;
+   overflow-x: hidden;
+   overflow-y: hidden;
+ }
+ .secarchAddress .content{
+padding-top: 30px;
+display: flex;
+flex-direction: column;
+gap: 30px;
+margin-bottom: 30px;
+ }
+ .secarchAddress .content input{
+width: 100%;
+padding:12px 10px;
+background-color: #181025;
+border: none;
+border-radius: 6px;
+ }
+ .secarchAddress .content input::placeholder{
+color: #8c8597;
+font-size: 12px;
+font-weight: 700;
+ }
+ .secarchAddress .boxs{
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+  position: relative;
+  align-items: end;
+ }
+ .secarchAddress .manBox{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  /* gap: 5%; */
+  width: 100%;
+ }
+ .secarchAddress .manBox .box{
+   background-color: #fdc53a;
+   display: flex;
+   flex-direction: column;
+padding: 10px;
+gap: 10px;
+border-radius: 7px;
+width: 90%;
+z-index: 112;
+ }
+ .secarchAddress .manBox .direc{
+  width: 18px;
+   height: 18px;
+border: 1px dashed white;
+border-radius: 50%;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+ }
+ .secarchAddress .manBox .direc::after{
+   content: "";
+   position: absolute;
+   width: 1px;
+   height: 100%;
+   background-color: white;
+   bottom: -7.5%;
+ }
+ .secarchAddress .manBox .direc::before{
+   content: "";
+   /* width: 5%; */
+   height: 1px;
+   position: absolute;
+   background-color: white;
+   left: 10.5%;
+   /* width: calc(10% - 18px); */
+   width: 100% !important;
+ }
+ .secarchAddress .manBox .direc i{
+ font-size: 10px;
+ }
+ .secarchAddress .manBox .box p{
+   margin: 0;
+   font-size: 9px;
+   font-weight: 700;
+ }
+ .secarchAddress .manBox .box .boxinfo{
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-transform: capitalize;
+ }
+ .secarchAddress .manBox2{
+   /* margin-left: 25px; */
+   /* gap: 7%; */
+   width: 95%;
+ }
+ .secarchAddress .manBox2 .direc::after{
+   top: 19.5%;
+   height: 20%;
+ }
+ .secarchAddress .manBox2 .direc::before{
+   left: 15%;
+  
+    width: calc(12% - 18px);;
+ }
+
+ .secarchAddress .manBox2 .box{
+   background-color: #32fc84;
+   width: 88%;
+  
+ }
+ .secarchAddress .manBox2 .box p{
+   
+   font-size: 8px;
+ }
+ .secarchAddress .box2Cust .box{
+background-color: #b9afc8;
+/* width: 90%; */
+ }
+ .secarchAddress .box2Cust .direc{
+height: 0;
+width: 0;
+border: none;
+ }
+ .secarchAddress .box2Cust .direc::before{
+   left: 13%;
+   /* width: 11%; */
+   width: calc(10% - 8px);
+ }
+ .secarchAddress .box2Cust .direc::after{
+  display: none;
+ }
+ .secarchAddress .manBox2  .dircgreen::after{
+   height: 100%;
+   top: 43%;
+  }
+ .secarchAddress .manBox3{
+   width: 90%;
+ }
+ .secarchAddress .manBox3 .box{
+   background-color: #32fc84;
+   width: 85%;
+ }
+ .secarchAddress .boxcustom3 .box{
+   background-color: #b9afc8;
+ }
+ .secarchAddress .manBox3  .box p{
+   font-size: 7px;
+ }
+ .secarchAddress .manBox3  .direc::before{
+  left: 20%;
+ width: calc(15% - 18px)
+ }
+.secarchAddress .boxcustom3 .boxcustom3dir::after{
+
+   height: 7.5%;
+
+   top: 54%;
+}
+.secarchAddress .manBox3 .boxcustom4dir::after{
+
+   height: 7.5%;
+
+   top: 64.5%;
+}
+.secarchAddress .manBox3 .boxcustom5dir::after{
+
+   height: 7.5%;
+
+   top: 75.5%;
+}
+.secarchAddress .manBox3 .boxcustom6dir::after{
+
+   height: 7.5%;
+
+   top: 86%;
+}
+.secarchAddress .manBox3 .boxcustom7dir::after{
+
+   height: 10.5%;
+
+   top: 96.5%;
+}
+ /* secarchAddress */
+
+
+
+
+
+
+
+
+
 
 /* responsive */
 @media (max-width:320px){
@@ -471,5 +801,277 @@ font-size: 7px !important;
     width: 100%;
     padding-right: 15px;
    }
+    /* master */
+ .master{
+   margin-top: 25px;
 }
+.master .content{
+   color: white;
+   
+}
+.master .head{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   text-transform: capitalize;
+}
+.master .head h3,.master .head p{
+   margin: 0;
+
+}
+
+.master .head h3{
+   /* font-size: 17px; */
+}
+.master .head h3 span{
+   color: #1fa15b;
+}
+.master .head p{
+   font-size: 14px;
+   margin-bottom: 10px;
+}
+.master .masterprogress{
+   background-color: #332941;
+   padding:10px;
+   border-radius: 8px;
+   margin-bottom: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 70px;
+   justify-content: center;
+}
+.master .masterprogress:last-child{
+   
+   padding:15px 10px;
+   height: 85px;
+}
+.master .progress {
+   width: 100%;
+   -webkit-appearance: none;
+   appearance: none;
+   border: none;
+   border-radius: 10px;
+   height: .5rem;
+ }
+ 
+ .master .progress::-webkit-progress-bar {
+   background-color: black;
+  
+ }
+ 
+ .master .progress::-webkit-progress-bar,
+ .master .progress::-webkit-progress-value {
+   border-radius: 5px;
+ }
+ 
+ .master .progress::-moz-progress-bar {
+   border-radius: 10px;
+   
+ }
+ 
+ .master .progress1::-webkit-progress-value {
+   background: #ffc33a;
+  
+ }
+ 
+.master .progress2::-webkit-progress-value {
+   background: #34fb84;
+ }
+ 
+
+.master .masterprogress .info{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.master .masterprogress .info p{
+   font-size: 12px;
+   margin: 0;
+}
+.master .masterprogress .info .invest{
+color: #d84558;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span{
+color: #d84558;
+border-radius: 50%;
+border: 1px solid #d84558;
+display: block;
+width: 16px;
+height: 16px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+}
+.master .masterprogress .info .invest span,.master .masterprogress:last-child .info p span i{
+font-size: 8px;
+}
+.master .masterprogress:last-child .info{
+   color: #34fb84;
+  
+}
+.master .masterprogress:last-child .info p{
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+  
+}
+.master .masterprogress:last-child .info p span{
+   border: 1px solid #34fb84;
+   color: #34fb84;
+}
+ /* master */
+ /* secarchAddress */
+ 
+
+ 
+ .secarchAddress .content input::placeholder{
+
+font-size: 15px;
+
+ }
+ 
+ .secarchAddress .manBox{
+   /* display: flex;
+   justify-content: end;
+   align-items: center;
+  justify-content: space-between;
+  padding-left: 15px; */
+  /* gap: 7%; */
+ }
+ .secarchAddress .manBox .box{
+   background-color: #fdc53a;
+   display: flex;
+   flex-direction: column;
+padding: 10px;
+gap: 10px;
+border-radius: 7px;
+ }
+ .secarchAddress .manBox .direc{
+  width: 18px;
+   height: 18px;
+border: 1px dashed white;
+border-radius: 50%;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+ }
+ .secarchAddress .manBox .direc::before{
+   content: "";
+   width: 7%;
+   height: 1px;
+   position: absolute;
+   background-color: white;
+   /* left: 9%; */
+   left: calc(10% - 4px);
+ }
+ .secarchAddress .manBox .direc i{
+ font-size: 10px;
+ }
+ .secarchAddress .manBox .box p{
+   margin: 0;
+   font-size: 11px;
+   font-weight: 700;
+ }
+ .secarchAddress .manBox .box .boxinfo{
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-transform: capitalize;
+ }
+ .secarchAddress .manBox2{
+   /* margin-left: 25px; */
+   /* gap: 7%; */
+ }
+ .secarchAddress .manBox2 .direc::before{
+   /* left: 16%; */
+   left: calc(12% + 6px);
+ }
+ .secarchAddress .manBox2 .direc::after {
+   top: 19%;
+   height: 20%;
+}
+ .secarchAddress .manBox2 .box{
+   background-color: #32fc84;
+   /* width: 80%; */
+  
+ }
+ .secarchAddress .manBox2 .box p{
+   
+   font-size: 9px;
+ }
+ .secarchAddress .manBox3  .box p{
+   font-size: 8px;
+ }
+ .secarchAddress .box2Cust .direc{
+   height: 0;
+   width: 0;
+   border: none;
+    }
+    .secarchAddress .box2Cust .direc::before{
+      left: 14%;
+      width: 10%;
+      left: calc(10% + 6px);
+    }
+    .secarchAddress .box2Cust .direc::after{
+     display: none;
+    }
+    .secarchAddress .manBox2  .dircgreen::after{
+      height: 100%;
+      top: 42%;
+     }
+    .secarchAddress .manBox3{
+      
+    }
+    .secarchAddress .manBox3 .box{
+      background-color: #32fc84;
+    }
+    .secarchAddress .boxcustom3 .box{
+      background-color: #b9afc8;
+    }
+  
+    .secarchAddress .manBox3  .direc::before{
+     left: 24%;
+     left: calc(15% + 15px);
+    }
+   .secarchAddress .boxcustom3 .boxcustom3dir::after{
+   
+      height: 8%;
+   
+      top: 53%;
+   }
+   .secarchAddress .manBox3 .boxcustom4dir::after{
+   
+      height: 8%;
+   
+      top: 64%;
+   }
+   .secarchAddress .manBox3 .boxcustom5dir::after{
+   
+      height: 8%;
+   
+      top: 74.5%;
+   }
+   .secarchAddress .manBox3 .boxcustom6dir::after{
+   
+      height: 7.5%;
+   
+      top: 86%;
+   }
+   .secarchAddress .manBox3 .boxcustom7dir::after{
+   
+      height: 10.5%;
+   
+      top: 96.5%;
+   }
+}
+
 /* responsive */

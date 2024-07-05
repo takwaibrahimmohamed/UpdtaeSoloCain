@@ -156,3 +156,28 @@ if(document.querySelectorAll("canvas").length >1 && document.querySelectorAll("c
   
   
 }
+
+
+
+
+const charthover=document.querySelectorAll(".charts .contain")
+const chartmainbox=document.querySelector(".charts .box")
+const chartbox=document.querySelector(".charts .numgraph")
+
+
+charthover.forEach(element => {
+ element.addEventListener(("mouseover"),(e)=>{
+  if(e.target.offsetLeft>150){
+     chartbox.style.left=`${e.target.offsetLeft - 50}px`
+  }
+  if(e.target.offsetLeft>120){
+     chartbox.style.left=`${e.target.offsetLeft - 70}px`
+  }
+  else{
+ chartbox.style.left=`${e.target.offsetLeft-20}px`
+  }
+ 
+
+  console.log(e.target.offsetLeft)
+ })
+});
